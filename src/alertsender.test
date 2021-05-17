@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Author: ymc023
+# Mail: 
+# Platform:
+# Date:2021年05月17日 星期一 14时03分41秒
+
+args=$1
+
+if [ -z $args ];then 
+    echo "Example: bash test.sh http://localhost/dingtalk/send"
+else 
+    curl -X POST -H 'Content-Type: application/json' -i "$args" --data '{'\''receiver'\'': '\''Watchdog'\'', '\''status'\'': '\''firing'\'', '\''alerts'\'': [{'\''status'\'': '\''firing'\'', '\''labels'\'': {'\''alertname'\'': '\''Watchdog'\'', '\''prometheus'\'': '\''monitoring/k8s'\'', '\''severity'\'': '\''none'\''}, '\''annotations'\'': {'\''message'\'': '\''这是一个验证告警通道是否正常的通知，应确保此告警始终开启并能正确接收。\n'\'', '\''runbook_url'\'': '\''https://github.com/prometheus-operator/kube-prometheus/wiki/watchdog'\''}, '\''startsAt'\'': '\''2021-05-09T07:48:52.088Z'\'', '\''endsAt'\'': '\''0001-01-01T00:00:00Z'\'', '\''generatorURL'\'': '\''http://prometheus-k8s-0:9090/graph?g0.expr=vector%281%29&g0.tab=1'\'', '\''fingerprint'\'': '\''e1749c6acab64267'\''}], '\''groupLabels'\'': {'\''alertname'\'': '\''Watchdog'\''}, '\''commonLabels'\'': {'\''alertname'\'': '\''Watchdog'\'', '\''prometheus'\'': '\''monitoring/k8s'\'', '\''severity'\'': '\''none'\''}, '\''commonAnnotations'\'': {'\''message'\'': '\''这是一个验证告警通道是否正常的通知，应确保此告警始终开启并能正确接收。\n'\'', '\''runbook_url'\'': '\''https://github.com/prometheus-operator/kube-prometheus/wiki/watchdog'\''}, '\''externalURL'\'': '\''http://alertmanager-main-0:9093'\'', '\''version'\'': '\''4'\'', '\''groupKey'\'': '\''{}/{alertname="Watchdog"}:{alertname="Watchdog"}'\'', '\''truncatedAlerts'\'': 0}'
+
+fi
