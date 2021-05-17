@@ -43,7 +43,7 @@
 * alertsender web api: /dingtalk/send, 可在启动的屏幕查看
 * alertsender 需要3个参数: 端口，钉钉机器人url,日志路径.如下：
 ```
-./alertsender.py 80  https://oapi.dingtalk.com/robot/send?access_token="1ce4599485341072c2c20b5ce54a72e706db8eea8c138427b7b52b82ca17d856"  /var/log/alertsender/alertsender.log
+./alertsender.py 80  https://oapi.dingtalk.com/robot/send?access_token="1ce45992e706db8eea8c138427b7b52b82ca17"  /var/log/alertsender/alertsender.log
 ```
 * 使用构建好的docker镜像时，其路径与名称为：/usr/bin/alertsender ,参数同上
 * alertsender.test 可快速验证告警通道是否正常，使用方法如下：
