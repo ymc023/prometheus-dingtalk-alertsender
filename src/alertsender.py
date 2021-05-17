@@ -122,7 +122,7 @@ def DataClean(alerts):
             # 替换数据中的url为自己对外暴露的地址
             url = i['generatorURL'].replace(
                 'prometheus-k8s-0:9090',
-                'pre-prometheus.xiujiadian.com')
+                'prometheus.***.com')
             msg = MSGFMT.format(
                 alert_time,
                 send_time,
