@@ -1,5 +1,4 @@
-# prometheus-dingtalk-alertsender
-
+# prometheus-dingtalk-alertsender 
 ### alertmanager webhook with dingtalk 
 ```
 最开始使用https://github.com/timonwong/prometheus-webhook-dingtalk
@@ -39,8 +38,25 @@
 
 ### 说明
 * 已构建基于alpine的prometheus-dingtalk-alertsender镜像，传入参数即可使用
+```
+docker pull registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.1.0
 
-* alertsender web api: /dingtalk/send, 可在启动的屏幕查看
+docker run -d \
+--name dingtalk-alertsender \
+-v /var/log/alertsender.log:/var/log/alertsender.log \
+-p 9999:80 \
+registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.1.0 \
+/usr/bin/alertsender 80 \
+https://oapi.dingtalk.com/robot/send?access_token=1ce4599485341072c2c20b5ce54a72e706db8eea8c138427b7b52b82ca17d856 \
+/var/log/alertsender.log
+
+以上，在本机映射端口为9999,其url应为: http://localhost:9999/dingtalk/send
+使用src中alertsender.test本机快速验证： bash alertsender.post http://localhost:9999/dingtalk/send
+除本机之外访问，应将localhost替换为ip
+
+```
+
+* alertsender api : /dingtalk/send
 * alertsender 需要3个参数: 端口，钉钉机器人url,日志路径.如下：
 ```
 ./alertsender.py 80  https://oapi.dingtalk.com/robot/send?access_token="1ce45992e706db8eea8c138427b7b52b82ca17"  /var/log/alertsender/alertsender.log
