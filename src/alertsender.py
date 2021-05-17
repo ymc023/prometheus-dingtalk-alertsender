@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Version: 0.1
+# Version: 0.1.2
 # Author: ymc023
 # Mail:
 # Platform:

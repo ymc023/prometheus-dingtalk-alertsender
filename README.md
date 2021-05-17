@@ -1,5 +1,4 @@
-# prometheus-dingtalk-alertsender 
-### alertmanager webhook with dingtalk 
+# prometheus-dingtalk-alertsender ### alertmanager webhook with dingtalk 
 ```
 最开始使用https://github.com/timonwong/prometheus-webhook-dingtalk
 这个dingtalk插件，结果修改自定义模板后，始终报404，无法正常发送信息
@@ -40,7 +39,7 @@
 ### 说明
 * 已构建基于alpine的prometheus-dingtalk-alertsender镜像，传入参数即可使用
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.2.0
+docker pull registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.1.2
 
 docker run -d \
 --name dingtalk-alertsender \
