@@ -51,7 +51,7 @@ https://oapi.dingtalk.com/robot/send?access_token=1ce4599485341072c2c20b5ce54a72
 /var/log/alertsender.log
 
 以上，在本机映射端口为9999,其url应为: http://localhost:9999/dingtalk/send
-使用src中alertsender.test本机快速验证： bash alertsender.post http://localhost:9999/dingtalk/send
+使用src中alertsender.test本机快速验证： bash alertsender.test http://localhost:9999/dingtalk/send
 除本机之外访问，应将localhost替换为ip
 
 ```
