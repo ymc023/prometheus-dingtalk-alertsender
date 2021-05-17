@@ -3,6 +3,7 @@
 ```
 最开始使用https://github.com/timonwong/prometheus-webhook-dingtalk
 这个dingtalk插件，结果修改自定义模板后，始终报404，无法正常发送信息
+最后，只有放弃这个插件，自己写个prometheus-dingtalk-alertsender
 ```
 
 ### 依赖
