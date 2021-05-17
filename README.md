@@ -47,7 +47,7 @@ docker run -d \
 -p 9999:80 \
 registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.1.0 \
 /usr/bin/alertsender 80 \
-https://oapi.dingtalk.com/robot/send?access_token=1ce4599485341072c2c20b5ce54a72e706db8eea8c138427b7b52b82ca17d856 \
+https://oapi.dingtalk.com/robot/send?access_token=1ce4599485341072c2c20b5ce58eea8c138427b7b52b82ca17d8 \
 /var/log/alertsender.log
 
 以上，在本机映射端口为9999,其url应为: http://localhost:9999/dingtalk/send
