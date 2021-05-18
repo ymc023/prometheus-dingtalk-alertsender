@@ -1,6 +1,6 @@
 # prometheus-dingtalk-alertsender 
 
-### alertmanager webhook with dingtalk 
+### prometheus-dingtalk-alertsender 
 
 ```
 最开始使用https://github.com/timonwong/prometheus-webhook-dingtalk
