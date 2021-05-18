@@ -39,7 +39,7 @@
 ### 说明
 * 已构建基于alpine的prometheus-dingtalk-alertsender镜像，传入参数即可使用
 ```
-docker pull registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.1.2
+docker pull registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:latest
 
 docker run -d \
 --name dingtalk-alertsender \
