@@ -48,7 +48,7 @@ docker run -d \
 --name dingtalk-alertsender \
 -v /var/log/alertsender.log:/var/log/alertsender.log \
 -p 9999:80 \
-registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:0.1.0 \
+registry.cn-hangzhou.aliyuncs.com/ymc023/prometheus-dingtalk-alertsender:latest \
 /usr/bin/alertsender 80 \
 https://oapi.dingtalk.com/robot/send?access_token=9485341072c2c20b5ce58eea8c138427b7b52b \
 /var/log/alertsender.log
